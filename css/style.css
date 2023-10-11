@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: "Quicksand", sans-serif;
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  color: #ff5c8d;
+}
+
+p.desc {
+  text-align: justify;
+}
+
+header.navbar-container {
+  background-color: #524a4e;
+  width: 100%;
+  margin-inline: auto;
+  display: inline-flex;
+  justify-content: space-around;
+  align-items: center;
+
+  padding-block: 1rem;
+  z-index: 999;
+
+  position: fixed;
+  top: 0;
+}
+
+header.navbar-container h2 {
+  color: white;
+}
+
+header.navbar-container .nav-list ul {
+  padding-left: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem 1rem;
+}
+
+header.navbar-container .nav-list li {
+  list-style-type: none;
+}
+
+header.navbar-container .nav-list li a {
+  text-decoration: none;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+  padding: 0.5rem 1.5rem;
+  border-radius: 999px;
+  transition: all 0.2s ease-in-out;
+}
+
+header.navbar-container .nav-list li:hover a {
+  background-color: #ff5c8d;
+  color: white;
+}
+
+.card {
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.card-aside {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-style: solid;
+  border-radius: 30px;
+  padding: 20px;
+}
+
+main {
+  max-width: 1500px;
+  width: 100%;
+  margin-inline: auto;
+  margin-top: 70px;
+  padding: 2rem 4rem;
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+}
+
+main .content .home {
+  flex: 1 1;
+  display: flex;
+  align-items: center;
+}
+
+main .content .home h1 {
+  font-size: 3.5rem;
+  margin-block: 1rem;
+}
+
+main .content .home a {
+  padding: 0.8rem 2.5rem;
+  margin-block-start: 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1rem;
+  font-family: "Quicksand", sans-serif;
+
+  border: 3px solid transparent;
+  border-radius: 999px;
+  background-color: #ff5c8d;
+  cursor: pointer;
+  transition: all 0.15s ease-in;
+}
+
+main .content .home a {
+  color: white;
+  text-decoration: none;
+}
+
+main .content .home a:hover {
+  border: 3px solid #ff5c8d;
+  background-color: white;
+  color: #524a4e;
+}
+
+main .content .home .content-image {
+  flex: 1;
+  display: flex;
+}
+
+main .content .home .content-image img {
+  margin: auto;
+  min-width: 300px;
+  width: 350px;
+}
+
+.content-main {
+  width: 75%;
+}
+
+.aside-content {
+  width: 25%;
+}
+
+.card-aside {
+  flex: 1;
+  margin: 30px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-aside .submit {
+  justify-content: center;
+}
+
+aside img {
+  width: 160px;
+}
+
+main .content .card-aside .submit {
+  padding: 0.8rem 2rem;
+  margin: 10px 0;
+  margin-block-start: 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1rem;
+  font-family: "Quicksand", sans-serif;
+
+  border: 3px solid transparent;
+  border-radius: 999px;
+  background-color: #ff5c8d;
+  color: white;
+  cursor: pointer;
+  transition: all 0.15s ease-in;
+}
+
+main .content .card-aside .submit:hover {
+  border: 3px solid #ff5c8d;
+  background-color: white;
+  color: #524a4e;
+}
+
+footer {
+  position: sticky;
+  width: 100%;
+  flex-shrink: 0;
+  padding: 20px;
+  color: white;
+  background-color: #524a4e;
+  text-align: center;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  header.navbar-container {
+    flex-direction: column;
+  }
+
+  header.navbar-container .nav-list ul {
+    flex-wrap: wrap;
+    column-gap: 0.5rem;
+  }
+
+  main {
+    padding: 1rem 3rem;
+  }
+
+  main .content {
+    flex-direction: column;
+    margin: 40px 30px;
+  }
+
+  main .content .content-main .home .content-image {
+    order: -1;
+  }
+
+  .aside-content {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  .card-aside {
+    flex-shrink: 0;
+  }
+
+  footer {
+    flex-shrink: 0;
+  }
+}
