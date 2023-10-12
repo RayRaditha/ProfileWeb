@@ -34,6 +34,10 @@ p.desc {
   top: 0;
 }
 
+header {
+  width: 100%;
+}
+
 header.navbar-container h2 {
   color: white;
 }
@@ -91,6 +95,7 @@ main {
 main .content .home {
   display: flex;
   align-items: center;
+  margin-bottom: 50px;
 }
 
 main .content .home h1 {
@@ -133,7 +138,7 @@ main .content .home .content-image img {
   width: 350px;
 }
 
-.aside-content{
+.aside-content {
   display: flex;
   column-gap: 25px;
   justify-content: center;
@@ -149,7 +154,7 @@ main .content .home .content-image img {
   width: 40%;
 }
 
-.card-aside article{
+.card-aside article {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -159,7 +164,7 @@ main .content .home .content-image img {
   justify-content: center;
 }
 
-.card-aside h3{
+.card-aside h3 {
   margin: 0;
 }
 
@@ -167,7 +172,7 @@ aside img {
   width: 160px;
 }
 
-#loginForm{
+#loginForm {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -175,16 +180,17 @@ aside img {
   row-gap: 5px;
 }
 
-#loginForm div{
+#loginForm div {
   width: 75%;
 }
 
-#loginForm input, textarea{
+#loginForm input,
+textarea {
   width: 100%;
   padding: 5px;
 }
 
-#loginForm textarea{
+#loginForm textarea {
   height: 70px;
 }
 
@@ -221,15 +227,30 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
+  * {
+    font-size: small;
+  }
+
+  span {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: medium;
+  }
+
+  .title {
+    margin-bottom: 40px;
+  }
 
   header.navbar-container {
     flex-direction: column;
   }
 
-  .card{
+  .card {
     flex-direction: column;
     align-content: center;
-  } 
+  }
 
   header.navbar-container .nav-list ul {
     flex-wrap: wrap;
@@ -255,11 +276,16 @@ footer {
     width: 100%;
   }
 
+  .card-aside img {
+    width: 120px;
+    height: 120px;
+  }
+
   footer {
     flex-shrink: 0;
   }
 
-  .navbar-container{
+  .navbar-container {
     position: relative;
   }
 }
